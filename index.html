@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mood Jukebox</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/lucide-static@latest/dist/lucide.min.js"></script>
+</head>
+<body>
+    <div class="background-effects">
+        <div class="blur-shape1"></div>
+        <div class="blur-shape2"></div>
+        <div class="blur-shape3"></div>
+    </div>
+
+    <div class="player-container">
+        <div class="header">
+            <h1 class="title-gradient">MOOD JUKEBOX</h1>
+            <div class="header-divider"></div>
+        </div>
+
+        <div class="display-screen">
+            <div class="display-content">
+                <div class="now-playing-label">NOW PLAYING:</div>
+                <div id="song-title" class="song-title-text">Select a mood</div>
+                <div id="artist-name" class="artist-name-text">...</div>
+                <div class="time-display">
+                    <span id="current-time">0:00</span>
+                    <span id="total-duration">0:00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-bar-container">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <audio id="audio-player"></audio>
+
+        <div class="controls">
+            <button id="prev-btn" class="control-btn"><i data-lucide="skip-back"></i></button>
+            <button id="play-pause-btn" class="control-btn play-btn"><i data-lucide="play"></i></button>
+            <button id="next-btn" class="control-btn"><i data-lucide="skip-forward"></i></button>
+        </div>
+
+        <div class="mood-list-container">
+            <div class="mood-list-label">SELECT MOOD:</div>
+            <div id="mood-list" class="mood-list">
+                <button class="mood-btn" data-mood="romantic">❤️ Romantic</button>
+                <button class="mood-btn" data-mood="happy">😊 Happy</button>
+                <button class="mood-btn" data-mood="chill">🧘 Chill</button>
+                <button class="mood-btn" data-mood="energetic">⚡ Energetic</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      // Initialize Lucide Icons
+      lucide.createIcons();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
